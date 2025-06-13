@@ -18,14 +18,13 @@
 *:focus {
   outline-color: stencilColor('optimizedCheckout-colorFocus');
 }
-
 .optimizedCheckout-header {
   background-color: stencilColor('optimizedCheckout-header-backgroundColor');
   /* stylelint-disable function-url-quotes*/
   background-image: url(stencilImage('optimizedCheckout-backgroundImage', 'optimizedCheckout-backgroundImage-size'));
   /* stylelint-enable */
   background-size: cover;
-  border-color: stencilColor('optimizedCheckout-header-borderColor');
+  border-color:2px solid #e5e5e5;
   color: stencilColor('optimizedCheckout-header-textColor');
 
   //
@@ -45,9 +44,10 @@
 // -----------------------------------------------------------------------------
 
 .optimizedCheckout-headingPrimary {
-  color: stencilColor('optimizedCheckout-headingPrimary-color');
-  font-family: stencilFontFamily('optimizedCheckout-headingPrimary-font'), Arial, Helvetica, sans-serif;
-  font-weight: stencilFontWeight('optimizedCheckout-headingPrimary-font');
+  color: #000;
+  font-family: Montserrat,Arial,Helvetica,sans-serif;
+  font-weight: 500;
+  letter-spacing:-1px;
 }
 
 .optimizedCheckout-headingSecondary {
@@ -97,11 +97,11 @@ body {
 // -----------------------------------------------------------------------------
 
 .optimizedCheckout-buttonPrimary {
-  background-color: stencilColor('optimizedCheckout-buttonPrimary-backgroundColor');
+  background-color: #000;
   border-color: stencilColor('optimizedCheckout-buttonPrimary-borderColor');
   color: stencilColor('optimizedCheckout-buttonPrimary-color');
   font-family: stencilFontFamily('optimizedCheckout-buttonPrimary-font'), Arial, Helvetica, sans-serif;
-  font-weight: stencilFontWeight('optimizedCheckout-buttonPrimary-font');
+  font-weight: 500;
 
   &:focus,
   &:hover {
@@ -112,7 +112,7 @@ body {
 
   &:focus {
     border-color: stencilColor('optimizedCheckout-colorFocus');
-    box-shadow: 0 0 3px stencilColor('optimizedCheckout-colorFocus');
+    box-shadow: none;
   }
 
   &:active {
@@ -141,10 +141,15 @@ body {
 
 .optimizedCheckout-buttonSecondary {
   background-color: stencilColor('optimizedCheckout-buttonSecondary-backgroundColor');
-  border-color: stencilColor('optimizedCheckout-buttonSecondary-borderColor');
+  border-color: #c7c7c7;
+  border-width:2px;
   color: stencilColor('optimizedCheckout-buttonSecondary-color');
-  font-family: stencilFontFamily('optimizedCheckout-buttonSecondary-font'), Arial, Helvetica, sans-serif;
-  font-weight: stencilFontWeight('optimizedCheckout-buttonSecondary-font');
+  font-family: Montserrat,Arial,Helvetica,sans-serif;
+  font-weight: 500;
+  border-radius:0;
+  -moz-border-radius:0;
+  -webkit-border-radius:0;
+  height:47px;
 
   &:focus,
   &:hover {
@@ -183,15 +188,17 @@ body {
 
 a {
   color: stencilColor('optimizedCheckout-link-color');
-  font-family: stencilFontFamily('optimizedCheckout-link-font'), Arial, Helvetica, sans-serif;
-  font-weight: stencilFontWeight('optimizedCheckout-link-font');
+  font-family: Montserrat,Arial,Helvetica,sans-serif;
+  font-weight: 700;
 
   &:focus,
   &:hover {
     color: stencilColor('optimizedCheckout-link-hoverColor');
   }
 }
-
+label.form-label.optimizedCheckout-form-label a {
+  text-decoration:underline;
+}
 //
 // Order Summary (Mobile Drawer & Modal)
 // Background Color
@@ -199,8 +206,12 @@ a {
 
 .optimizedCheckout-orderSummary {
   background-color: stencilColor('optimizedCheckout-orderSummary-backgroundColor');
-  border-color: stencilColor('optimizedCheckout-orderSummary-borderColor');
-  box-shadow: 0 4px 8px transparentize(stencilColor('optimizedCheckout-orderSummary-borderColor'), 0.5);
+  border-color: #c7c7c7;
+  border-width:2px;
+  border-radius:0;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  box-shadow:none;
 }
 
 .optimizedCheckout-orderSummary-cartSection {
@@ -251,16 +262,20 @@ a {
 // Styles form fields.
 // -----------------------------------------------------------------------------
 
-$optimizedCheckout-input-boxShadow: inset 0 1px 1px stencilColor('optimizedCheckout-formField-shadowColor');
-$optimizedCheckout-input--focus-boxShadow: 0 0 3px transparentize(stencilColor('optimizedCheckout-colorFocus'), 0.4);
-$optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(stencilColor('optimizedCheckout-formField-errorColor'), 0.4);
+$optimizedCheckout-input-boxShadow: none;
+$optimizedCheckout-input--focus-boxShadow: none;
+$optimizedCheckout-input--error-boxShadow: none;
 
 .optimizedCheckout-form-input,
 .optimizedCheckout-form-select {
   background-color: stencilColor('optimizedCheckout-formField-backgroundColor');
-  border-color: stencilColor('optimizedCheckout-formField-borderColor');
+  border-color: #e5e5e5;
+  border-width:2px;
   box-shadow: $optimizedCheckout-input-boxShadow;
   color: stencilColor('optimizedCheckout-formField-textColor');
+  -moz-border-radius:0;
+  -webkit-border-radius:0;
+  border-radius:0;
 
   &::placeholder {
     color: stencilColor('optimizedCheckout-formField-placeholderColor');
