@@ -15,9 +15,6 @@ blog:
 {{/partial}}
 
 {{#partial "page"}}
-
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
 <main class="page">
     {{#unless theme_settings.hide_blog_page_heading }}
         <h1 class="page-heading">{{ blog.name }}</h1>
@@ -29,6 +26,6 @@ blog:
 
     {{> components/common/paginator pagination.blog}}
 </main>
-
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 {{/partial}}
 {{> layout/base}}
