@@ -10,7 +10,7 @@
 }
 
 .dropdown-menu {
-  z-index: $zIndex-lowest;
+  z-index: 100;
 
   &.is-loading .loadingOverlay {
     background: none;
@@ -130,10 +130,16 @@
   }
 
   .button {
-    background-color: stencilColor('dropdown--wishList-backgroundColor');
+    background-color:#c7c7c7;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     width: 100%;
+    border-left:1px solid #c7c7c7;
+    color:#666;
+    font-weight:500;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:12px;
   }
 
   .button--has-items {
